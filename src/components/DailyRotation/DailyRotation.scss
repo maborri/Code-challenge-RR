@@ -1,0 +1,19 @@
+@import "../../styles/colors";
+
+.rotation__container {
+  height: 900px;
+  background-image: radial-gradient(
+    circle,
+    $gradient-secondary,
+    $gradient-middle1,
+    $gradient-middle2,
+    $gradient-middle3,
+    $gradient-main
+  );
+  position: relative;
+  top: -5px;
+}
+
+.rotation__title, .rotation__subtitle {
+  margin: 0;
+}

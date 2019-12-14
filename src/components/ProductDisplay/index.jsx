@@ -2,6 +2,11 @@ import React from 'react';
 
 import './ProductDisplay.scss';
 import ProductCollage from './ProductCollage';
+import flowerIcon from '../../assets/img/flower.png';
+import moonIcon from '../../assets/img/mooon.png';
+import dosageIcon from '../../assets/img/dosage.png';
+import flowerMedium from '../../assets/img/flower-medium.png';
+
 
 const ProductImage = (props) => {
   return (
@@ -21,24 +26,35 @@ const ProductImage = (props) => {
       </div>
 
       <div>
-        <ul>
-          <li>
-            <img src="" alt="" />
-            <h6>Key Ingredients:</h6>
-            <p>Hou Po (Magnolia Bark), Chamomile, Shan Zha</p>
+        <ul className="product__detail-list">
+          <li className="product__detail-item">
+            <img src={flowerIcon} alt="" className="product__detail-icon" />
+            <div>
+              <h6 className="product__detail--title">Key Ingredients:</h6>
+              <p className="product__detail--content">Hou Po (Magnolia Bark), Chamomile, Shan Zha</p>
+            </div>
           </li>
-          <li>
-            <img src="" alt="" />
-            <h6>Key Ingredients:</h6>
-            <p>Hou Po (Magnolia Bark), Chamomile, Shan Zha</p>
+          <li className="product__detail-item">
+            <img src={moonIcon} alt="" className="product__detail-icon" />
+            <div>
+              <h6 className="product__detail--title">Treats:</h6>
+              <p className="product__detail--content">Poor digestion that prevents quality sleep</p>
+            </div>
           </li>
-          <li>
-            <img src="" alt="" />
-            <h6>Key Ingredients:</h6>
-            <p>Hou Po (Magnolia Bark), Chamomile, Shan Zha</p>
+          <li className="product__detail-item">
+            <img src={dosageIcon} alt="" className="product__detail-icon" />
+            <div>
+              <h6 className="product__detail--title">Dosage:  </h6>
+              <p className="product__detail--content">1 capsule/day</p>
+            </div>
           </li>
         </ul>
       </div>
+
+
+    <div>
+      <img className="flower-background" src={flowerMedium} alt="" />
+    </div>
     </>
   );
 }

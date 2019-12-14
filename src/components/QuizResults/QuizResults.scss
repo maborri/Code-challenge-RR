@@ -5,42 +5,14 @@
   border-bottom-left-radius: 60% 12%;
   border-bottom-right-radius: 60% 12%;
   height: 600px;
-  background-image: radial-gradient(circle, $gradient-secondary, $gradient-middle1, $gradient-middle2, $gradient-middle3, $gradient-main);
-
-  .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 28px 18px;
-    margin-bottom: 42px;
-
-    .header__element {
-      width: 100%;
-
-      &--left {
-        justify-content: left;
-        align-items: center;  
-        display: flex;
-      }
-
-      &--center {
-        justify-content: center; 
-        align-items: center;
-        display: flex; 
-
-        img {
-          width: 75px;
-          height: 23px;
-        }
-      }
-
-      &--right {
-        justify-content: right;  
-        align-items: center;
-        display: flex;
-      }
-    }
-  }
+  background-image: radial-gradient(
+    circle,
+    $gradient-secondary,
+    $gradient-middle1,
+    $gradient-middle2,
+    $gradient-middle3,
+    $gradient-main
+  );
 
   .results-body__title {
     color: $white;
@@ -77,38 +49,5 @@
     margin: 0 32px 40px 32px;
     opacity: 0.7;
     text-align: center;
-  }
-
-  .see-product {
-    &__container {
-      position: absolute;
-      bottom: -24px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-    }
-
-    &__icon {
-      align-items: center;
-      background-color: $white;
-      border-radius: 50%;
-      display: flex;
-      height: 48px;
-      justify-content: center;
-      position: relative;
-      width: 48px;
-    }
-
-    &__text {
-      min-width: 220px;
-      color: $white;
-      font-family: Helvetica;
-      font-size: 14px;
-      opacity: 0.7;
-      margin-bottom: 20px;
-    }
   }
 }
