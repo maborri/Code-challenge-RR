@@ -1,0 +1,55 @@
+@import "../../styles/colors";
+
+.product__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product__name {
+  color: $font-primary;
+  font-family: Cambon;
+  font-size: 34px;
+  font-weight: normal;
+  line-height: 72px;
+  margin: 0;
+}
+
+.product__description {
+  font-family: SF UI Text;
+  font-size: 18px;
+  line-height: 26px;
+  color: $black;
+  max-width: 230px;
+  text-align: center;
+  margin: 0;
+  opacity: 0.6;
+}
+
+.product__price {
+  font-size: 27px;
+  line-height: 28px;
+  margin: 40px 0;
+  font-weight: 500;
+}
+
+.product__add-button {
+  border: none;
+  background: $button-primary;
+  border-radius: 4px;
+  width: 300px;
+  height: 64px;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: $white;
+  margin-bottom: 40px;
+}
+
+.product__learn-more-button {
+  font-family: Helvetica;
+  font-size: 16px;
+  color: $font-primary;
+  margin-bottom: 60px;
+  border-bottom: 2px solid $underline;
+  padding-bottom: 8px;
+}

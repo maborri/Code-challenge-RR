@@ -1,0 +1,38 @@
+@import "../../../styles/colors";
+
+.results-body__title {
+  color: $white;
+  font-family: Cambon;
+  font-size: 18px;
+  height: 40px;
+  text-align: center;
+  margin-bottom: 29px;
+}
+
+.results-body__image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.results-body__name {
+  color: $white;
+  display: flex;
+  font-size: 28px;
+  font-family: Cambon;
+  height: 40px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.results-body__details {
+  color: $white;
+  display: flex;
+  font-family: Helvetica;
+  font-size: 16px;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0 32px 40px 32px;
+  opacity: 0.7;
+  text-align: center;
+}
