@@ -211,9 +211,15 @@
   border-radius: 50%;
   opacity: 0.4;
   mix-blend-mode: normal;
+  box-shadow: 0px 2px 6px black;
+
   &--selected {
     opacity: 1;
     border-color: $button-selected;
+  }
+
+  &:not(.rotation__button--selected):hover {
+    border-color: lighten($gradient-main, 10%);
   }
 }
 
