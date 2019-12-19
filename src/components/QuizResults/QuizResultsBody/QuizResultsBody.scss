@@ -1,8 +1,9 @@
 @import "../../../styles/colors";
+@import "../../../styles/fonts";
 
 .results-body__title {
   color: $white;
-  font-family: Cambon;
+  font-family: $font-primary;
   font-size: 18px;
   height: 40px;
   text-align: center;
@@ -19,7 +20,7 @@
   color: $white;
   display: flex;
   font-size: 28px;
-  font-family: Cambon;
+  font-family: $font-primary;
   height: 40px;
   justify-content: center;
   margin-bottom: 15px;
@@ -28,7 +29,7 @@
 .results-body__details {
   color: $white;
   display: flex;
-  font-family: Helvetica;
+  font-family: $font-extra;
   font-size: 16px;
   justify-content: center;
   line-height: 24px;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import useWidowsSize from '../../utils/useWindowsSize';
+import useWidowsSize from '../../hooks/useWindowsSize';
 import './DailyRotation.scss';
 import hexagon from '../../assets/img/hexagon.png';
 import glassGuy from '../../assets/img/glasses.png';

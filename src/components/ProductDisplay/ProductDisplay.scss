@@ -1,4 +1,5 @@
 @import "../../styles/colors";
+@import "../../styles/fonts";
 
 .product__container {
   display: flex;
@@ -26,7 +27,7 @@
 
 .product__name {
   color: $font-primary;
-  font-family: Cambon;
+  font-family: $font-primary;
   font-size: 34px;
   font-weight: normal;
   line-height: 72px;
@@ -34,7 +35,7 @@
 }
 
 .product__description {
-  font-family: SF UI Text;
+  font-family: $font-ternary;
   font-size: 18px;
   line-height: 26px;
   color: $black;
@@ -73,7 +74,7 @@
   border-radius: 4px;
   width: 300px;
   height: 64px;
-  font-family: Helvetica;
+  font-family: $font-extra;
   font-size: 16px;
   color: $white;
   margin-bottom: 40px;
@@ -91,7 +92,7 @@
 }
 
 .product__learn-more-button {
-  font-family: Helvetica;
+  font-family: $font-extra;
   font-size: 16px;
   color: $font-primary;
   border-bottom: 2px solid $underline;
@@ -136,7 +137,7 @@
     &--title {
       margin-top: 0;
       color: $button-primary;
-      font-family: Helvetica;
+      font-family: $font-extra;
       font-size: 14px;
       margin-bottom: 0;
     }
@@ -145,7 +146,7 @@
       margin-top: 8px;
       margin-right: 38px;
       color: $font-secondary;
-      font-family: Helvetica;
+      font-family: $font-extra;
       font-size: 14px;
       opacity: 0.6;
     }
