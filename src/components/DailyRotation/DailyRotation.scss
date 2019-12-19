@@ -1,7 +1,9 @@
 @import "../../styles/colors";
 
 .rotation__container {
-  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: radial-gradient(
     circle,
     $gradient-secondary,
@@ -12,8 +14,213 @@
   );
   position: relative;
   top: -5px;
+  width: 100%;
 }
 
-.rotation__title, .rotation__subtitle {
+.rotation__title,
+.rotation__subtitle {
   margin: 0;
+  color: $white;
+  text-align: center;
+  font-weight: normal;
+}
+
+.rotation__title {
+  font-family: Cambon;
+  font-size: 34px;
+  padding-top: 72px;
+  margin-bottom: 20px;
+}
+
+.rotation__subtitle {
+  padding: 0 40px;
+  font-family: Circe;
+  font-size: 14px;
+  margin-bottom: 80px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    opacity: 0.6;
+    margin-bottom: 113px;
+  }
+}
+
+.rotation__schedule {
+  width: 300px;
+  height: 300px;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 80px;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 432px;
+    margin-bottom: 106px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 1200px;
+    height: 720px;
+  }
+}
+
+.rotation__list {
+  padding: 0;
+  margin: 0;
+
+  @media screen and (min-width: 1440px) {
+    position: relative;
+    left: 240px;
+    margin-top: 140px;
+  }
+}
+
+.rotation__schedule--text {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 178px;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    height: 432px;
+    justify-content: center;
+    right: 160px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    right: 205px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    position: relative;
+    right: 0;
+    margin-bottom: 28px;
+    height: 72px;
+    width: 300px;
+  }
+}
+
+.rotation__day {
+  font-family: Circe;
+  font-size: 14px;
+  margin: 80px 0 0 0;
+
+  @media screen and (min-width: 768px) {
+    margin: 175px 0 0 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.rotation__description {
+  text-align: center;
+  opacity: 0.6;
+  font-family: Circe;
+  font-size: 14px;
+  max-width: 180px;
+  line-height: 24px;
+  margin-bottom: 225px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 220px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin: 0;
+    padding: 0;
+    max-width: 250px;
+  }
+}
+
+.rotation__img--hexagon {
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  z-index: 10;
+
+  @media screen and (min-width: 768px) {
+    width: 432px;
+    height: 432px;
+    right: 56px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    right: 100px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 720px;
+    height: 720px;
+    right: 0;
+  }
+}
+
+.rotation__img--glass-guy {
+  width: 120px;
+  height: 160px;
+  left: 0;
+  bottom: -50px;
+  position: absolute;
+  z-index: 1;
+
+  @media screen and (min-width: 768px) {
+    left: 40px;
+    width: 336px;
+    height: 448px;
+    top: -8px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    left: 200px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 0;
+    left: 0;
+    width: 540px;
+    height: 720px;
+  }
+}
+
+.rotation__button-container {
+  display: flex;
+  width: 195px;
+  justify-content: space-between;
+  margin-bottom: 112px;
+
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.rotation__button {
+  color: $white;
+  width: 0;
+  border: 6px solid black;
+  border-radius: 50%;
+  opacity: 0.4;
+  mix-blend-mode: normal;
+  &--selected {
+    opacity: 1;
+    border-color: $button-selected;
+  }
+}
+
+.rotation__divisor {
+  border-bottom: 1px solid $white;
+  width: 300px;
+  margin-bottom: 100px;
+
+  @media screen and (min-width: 768px) {
+    width: 576px;
+  }
 }

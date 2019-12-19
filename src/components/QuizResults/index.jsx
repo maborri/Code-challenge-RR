@@ -10,8 +10,10 @@ const QuizResults = (props) => {
   return (
     <div className="results__container">
       <QuizResultsHeader />
-      <QuizResultsBody />
-      <GoToProduct />
+      <div className="results__container--inner">
+        <QuizResultsBody />
+        <GoToProduct />
+      </div>
     </div>
   );
 }

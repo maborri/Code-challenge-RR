@@ -4,6 +4,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding-top: 70px;
+  }
+}
+
+.product__detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 65px;
+    width: 50%;
+    align-items: flex-start;
+  }
 }
 
 .product__name {
@@ -24,6 +42,10 @@
   text-align: center;
   margin: 0;
   opacity: 0.6;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .product__price {
@@ -31,6 +53,18 @@
   line-height: 28px;
   margin: 40px 0;
   font-weight: 500;
+}
+
+.product__buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 56px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    margin-bottom: 46px;
+  }
 }
 
 .product__add-button {
@@ -43,34 +77,64 @@
   font-size: 16px;
   color: $white;
   margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    width: 216px;
+    margin-right: 26px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 276px;
+    margin-right: 52px;
+  }
 }
 
 .product__learn-more-button {
   font-family: Helvetica;
   font-size: 16px;
   color: $font-primary;
-  margin-bottom: 30px;
   border-bottom: 2px solid $underline;
   padding-bottom: 8px;
+  white-space: nowrap;
 }
 
 .product__detail-list {
+  display: flex;
   list-style: none;
   margin: 0 0 40px 0;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    margin: 0 0 80px 0;
+    padding-left: 57px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 775px;
+    padding-left: 95px;
+  }
 
   .product__detail-item {
     display: flex;
-    align-items: center;
+    width: 100%;
   }
 
   .product__detail-icon {
     margin-right: 28px;
+    margin-top: 12px;
     width: 24px;
     height: 24px;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 18px;
+    }
   }
 
   .product__detail {
     &--title {
+      margin-top: 0;
       color: $button-primary;
       font-family: Helvetica;
       font-size: 14px;
@@ -78,6 +142,7 @@
     }
 
     &--content {
+      margin-top: 8px;
       margin-right: 38px;
       color: $font-secondary;
       font-family: Helvetica;
@@ -88,5 +153,22 @@
 }
 
 .flower-background {
-  max-width: 375px;
+  background: url("../../assets/img/flower-medium.png");
+  height: 210px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (min-width: 768px) {
+    height: 436px;
+    background-image: url("../../assets/img/flower-big.png");
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 740px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 810px;
+  }
 }
