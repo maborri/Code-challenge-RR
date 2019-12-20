@@ -9,7 +9,7 @@ const GoToProduct = (props) => {
         <div className="see-product__text">See our recommendations below</div>
         <a href="#productDisplay">
           <div className="see-product__icon">
-            <img src={downArrow} />
+            <img src={downArrow} alt="Go to product" />
           </div>
         </a>
       </div>

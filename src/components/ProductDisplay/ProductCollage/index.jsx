@@ -10,11 +10,11 @@ import dots from '../../../assets/img/dots.png';
 const ProductCollage = (props) => {
   return (
       <div id="productDisplay" className="collage__container">
-        <img src={ZPackage} className="collage__package" />
-        <img src={flowerRight} className="collage__flower--right" />
-        <img src={flowerLeft} className="collage__flower--left" />
-        <img src={hexagon} className="collage__hexagon" />
-        <img src={dots} className="collage__dots" />
+        <img src={ZPackage} className="collage__package" alt="Product" />
+        <img src={flowerRight} className="collage__flower--right" alt="" />
+        <img src={flowerLeft} className="collage__flower--left" alt="" />
+        <img src={hexagon} className="collage__hexagon" alt="" />
+        <img src={dots} className="collage__dots" alt="" />
       </div>
   );
 }

@@ -8,7 +8,7 @@ const QuizResultsBody = (props) => {
     <>
       <div className="results-body__title">Mati, your sleep profile would be</div>
 
-      <div className="results-body__image"><img src={diagnosticImg} /></div>
+      <div className="results-body__image"><img src={diagnosticImg} alt="" /></div>
 
       <div className="results-body__name">Tummy Turmoil</div>
 

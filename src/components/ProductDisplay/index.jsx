@@ -22,28 +22,28 @@ const ProductImage = (props) => {
 
           <div className="product__buttons-container">
             <button className="product__add-button">Add To Cart</button>
-            <a className="product__learn-more-button">Learn more</a>
+            <a className="product__learn-more-button" href="#">Learn more</a>
           </div>
         </div>
       </div>
 
       <ul className="product__detail-list">
         <li className="product__detail-item">
-          <img src={flowerIcon} alt="" className="product__detail-icon" />
+          <img src={flowerIcon} alt="" className="product__detail-icon" alt="" />
           <div>
             <h6 className="product__detail--title">Key Ingredients:</h6>
             <p className="product__detail--content">Hou Po (Magnolia Bark), Chamomile, Shan Zha</p>
           </div>
         </li>
         <li className="product__detail-item">
-          <img src={moonIcon} alt="" className="product__detail-icon" />
+          <img src={moonIcon} alt="" className="product__detail-icon" alt="" />
           <div>
             <h6 className="product__detail--title">Treats:</h6>
             <p className="product__detail--content">Poor digestion that prevents quality sleep</p>
           </div>
         </li>
         <li className="product__detail-item">
-          <img src={dosageIcon} alt="" className="product__detail-icon" />
+          <img src={dosageIcon} alt="" className="product__detail-icon" alt="" />
           <div>
             <h6 className="product__detail--title">Dosage:  </h6>
             <p className="product__detail--content">1 capsule/day</p>
@@ -51,7 +51,7 @@ const ProductImage = (props) => {
         </li>
       </ul>
 
-      <img className="flower-background" />
+      <img className="flower-background" alt="" />
     </>
   );
 }

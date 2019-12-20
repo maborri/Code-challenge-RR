@@ -9,13 +9,13 @@ const QuizResults = (props) => {
   return (
     <div className="header">
       <div className="header__element--left">
-        <img src={backIcon} />
+        <img src={backIcon} alt="Navigate back" />
       </div>
       <div className="header__element--center">
-        <img src={brandIcon} />
+        <img src={brandIcon} alt="Remrise" />
       </div>
       <div className="header__element--right">
-        <img src={closeIcon} />
+        <img src={closeIcon} alt="Close" />
       </div>
     </div>
   );
