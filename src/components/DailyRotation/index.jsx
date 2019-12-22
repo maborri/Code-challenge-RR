@@ -8,17 +8,15 @@ import glassGuy from '../../assets/img/glasses.png';
 const DEFAULT_ROTATION_DAY = 1;
 
 const DailyRotation = (props) => {
-  const [rotationDay, setRotationDay] = useState(DEFAULT_ROTATION_DAY);
-  const [rotationData] = useState(props.rotationData.daily_rotation);
-  console.log('props.rotationData: ', props.rotationData);
-  
+  const [currentoRotationDay, setRotationDay] = useState(DEFAULT_ROTATION_DAY);
+
   const calculateRotationList = (width) => {
-    if (rotationData.rotations.length === 0) {
+    if (props.rotations.length === 0) {
       return;
     }
 
     if (width >= 1440) {
-      return rotationData.rotations.map((rotation) => {
+      return props.rotations.map((rotation) => {
         return (
           <li className="rotation__schedule--text" key={rotation.id}>
             <h4 className="rotation__day">
@@ -34,10 +32,10 @@ const DailyRotation = (props) => {
       return (
         <li className="rotation__schedule--text">
           <h4 className="rotation__day">
-            {rotationData.rotations[rotationDay - 1].title}
+            {props.rotations[currentoRotationDay - 1].title}
           </h4>
           <p className="rotation__description">
-            {rotationData.rotations[rotationDay - 1].description}
+            {props.rotations[currentoRotationDay - 1].description}
           </p>
         </li>
       );
@@ -49,11 +47,11 @@ const DailyRotation = (props) => {
   }
 
   const calculateCarouselButtons = () => {
-    if (rotationData.rotations.length === 0) {
+    if (props.rotations.length === 0) {
       return;
     }
-    return rotationData.rotations.map((rotation) => {
-      const isActive = rotationDay === rotation.id;
+    return props.rotations.map((rotation) => {
+      const isActive = currentoRotationDay === rotation.id;
       return (
         <div
           id={rotation.id}
@@ -71,8 +69,8 @@ const DailyRotation = (props) => {
 
   return (
     <div className="rotation__container">
-      <h1 className="rotation__title">{rotationData.title}</h1>
-      <h2 className="rotation__subtitle">{rotationData.subtitle}</h2>
+      <h1 className="rotation__title">{props.title}</h1>
+      <h2 className="rotation__subtitle">{props.subtitle}</h2>
 
       <div className="rotation__schedule">
         <img src={hexagon} className="rotation__img--hexagon" alt="" />

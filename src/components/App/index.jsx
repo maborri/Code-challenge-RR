@@ -7,21 +7,18 @@ import DailyRotation from '../DailyRotation';
 import './style.scss';
 
 const App = () => {
-  const [appData, setAppData] = useState({ 
-    daily_rotation: {
+  const [rotationData, setRotationData] = useState({
       title: '',
       subtitle: '',
       rotations: []
-    }
-  });
+    });
 
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
         'http://localhost:1234/quiz-results',
       );
-      console.log('RESULTS: ', result);
-      setAppData(result.data.resultsMock);
+      setRotationData(result.data.resultsMock.daily_rotation);
     };
 
     fetchData();
@@ -31,7 +28,10 @@ const App = () => {
     <>
       <QuizResults />
       <ProductDisplay />
-      <DailyRotation rotationData={appData} />
+      <DailyRotation
+        rotations={rotationData.rotations}
+        title={rotationData.title}
+        subtitle={rotationData.subtitle} />
     </>
   );
 }
