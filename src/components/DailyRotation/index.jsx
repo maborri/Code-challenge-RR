@@ -9,14 +9,14 @@ const DEFAULT_ROTATION_DAY = 1;
 
 const DailyRotation = (props) => {
   const [currentoRotationDay, setRotationDay] = useState(DEFAULT_ROTATION_DAY);
-
+  console.log('GOT resultsMock:', props);
   const calculateRotationList = (width) => {
-    if (props.rotations.length === 0) {
+    if (props.dailyRotation.rotations.length === 0) {
       return;
     }
 
     if (width >= 1440) {
-      return props.rotations.map((rotation) => {
+      return props.dailyRotation.rotations.map((rotation) => {
         return (
           <li className="rotation__schedule--text" key={rotation.id}>
             <h4 className="rotation__day">
@@ -32,10 +32,10 @@ const DailyRotation = (props) => {
       return (
         <li className="rotation__schedule--text">
           <h4 className="rotation__day">
-            {props.rotations[currentoRotationDay - 1].title}
+            {props.dailyRotation.rotations[currentoRotationDay - 1].title}
           </h4>
           <p className="rotation__description">
-            {props.rotations[currentoRotationDay - 1].description}
+            {props.dailyRotation.rotations[currentoRotationDay - 1].description}
           </p>
         </li>
       );
@@ -47,10 +47,10 @@ const DailyRotation = (props) => {
   }
 
   const calculateCarouselButtons = () => {
-    if (props.rotations.length === 0) {
+    if (props.dailyRotation.rotations.length === 0) {
       return;
     }
-    return props.rotations.map((rotation) => {
+    return props.dailyRotation.rotations.map((rotation) => {
       const isActive = currentoRotationDay === rotation.id;
       return (
         <div
@@ -69,8 +69,8 @@ const DailyRotation = (props) => {
 
   return (
     <div className="rotation__container">
-      <h1 className="rotation__title">{props.title}</h1>
-      <h2 className="rotation__subtitle">{props.subtitle}</h2>
+      <h1 className="rotation__title">{props.dailyRotation.title}</h1>
+      <h2 className="rotation__subtitle">{props.dailyRotation.subtitle}</h2>
 
       <div className="rotation__schedule">
         <img src={hexagon} className="rotation__img--hexagon" alt="" />

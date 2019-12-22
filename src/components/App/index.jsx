@@ -7,18 +7,28 @@ import DailyRotation from '../DailyRotation';
 import './style.scss';
 
 const App = () => {
-  const [rotationData, setRotationData] = useState({
+  const [appData, setAppData] = useState({
+    resultsMock: {
+      daily_rotation: {
+        title: '',
+        subtitle: '',
+        rotations: []
+      },
+    },
+    parsedProductData: {
       title: '',
-      subtitle: '',
-      rotations: []
-    });
+      description: '',
+      price: 0,
+    }
+  });
 
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
         'http://localhost:1234/quiz-results',
       );
-      setRotationData(result.data.resultsMock.daily_rotation);
+      console.log('gota data AS:', result);
+      setAppData(result.data);
     };
 
     fetchData();
@@ -27,11 +37,9 @@ const App = () => {
   return (
     <>
       <QuizResults />
-      <ProductDisplay />
-      <DailyRotation
-        rotations={rotationData.rotations}
-        title={rotationData.title}
-        subtitle={rotationData.subtitle} />
+      <ProductDisplay product={appData.parsedProductData} />
+      <DailyRotation dailyRotation={appData.resultsMock.daily_rotation}
+      />
     </>
   );
 }

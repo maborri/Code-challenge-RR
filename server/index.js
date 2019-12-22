@@ -32,7 +32,10 @@ app.get("/quiz-results", cors(), async (req, res) => {
       description: productData.body_html,
       price: variantData[0].price,
     };
-
+    console.log('sending',{
+      ...quizResults.data,
+      parsedProductData,
+    });
     res.send({
       ...quizResults.data,
       parsedProductData,

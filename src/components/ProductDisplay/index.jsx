@@ -5,20 +5,19 @@ import ProductCollage from './ProductCollage';
 import flowerIcon from '../../assets/img/flower.png';
 import moonIcon from '../../assets/img/mooon.png';
 import dosageIcon from '../../assets/img/dosage.png';
-//import flowerMedium from '../../assets/img/flower-medium.png';
-
 
 const ProductImage = (props) => {
+  console.log('GOT parsedProductData:', props.product);
   return (
     <>
       <div className="product__container">
         <ProductCollage />
         <div className="product__detail-container">
-          <h2 className="product__name">Calm Seas</h2>
+          <h2 className="product__name">{props.product.title}</h2>
           <p className="product__description">
-            Tames stomach unrest and eases digestion so you can sleep comfortable, all night.
+            {props.product.description}
           </p>
-          <h4 className="product__price">$60/mo.</h4>
+          <h4 className="product__price">{props.product.price}/mo.</h4>
 
           <div className="product__buttons-container">
             <button className="product__add-button">Add To Cart</button>
