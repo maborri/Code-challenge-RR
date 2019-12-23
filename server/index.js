@@ -26,16 +26,14 @@ app.get("/quiz-results", cors(), async (req, res) => {
 
     console.debug(`Getting variant data for 1 month subscription (id: ${TEST_VARIANT_ID}) \n`);
     const variantData = productData.variants.filter((variant) => variant.id === TEST_VARIANT_ID);
-    console.debug(`variantData: ${JSON.stringify(variantData)}) \n`);
+
     const parsedProductData = {
       title: productData.title,
       description: productData.body_html,
       price: variantData[0].price,
+      productType: productData.product_type
     };
-    console.log('sending',{
-      ...quizResults.data,
-      parsedProductData,
-    });
+
     res.send({
       ...quizResults.data,
       parsedProductData,

@@ -26,7 +26,7 @@
 }
 
 .product__name {
-  color: $font-primary;
+  color: $font-main;
   font-family: $font-primary;
   font-size: 34px;
   font-weight: normal;
@@ -69,6 +69,7 @@
 }
 
 .product__add-button {
+  cursor: pointer;
   border: none;
   background: $button-primary;
   border-radius: 4px;
@@ -78,6 +79,10 @@
   font-size: 16px;
   color: $white;
   margin-bottom: 40px;
+
+  &:hover {
+    background: $gradient-secondary;
+  }
 
   @media screen and (min-width: 768px) {
     width: 216px;
@@ -92,9 +97,10 @@
 }
 
 .product__learn-more-button {
+  text-decoration: none;
   font-family: $font-extra;
   font-size: 16px;
-  color: $font-primary;
+  color: $font-main;
   border-bottom: 2px solid $underline;
   padding-bottom: 8px;
   white-space: nowrap;
@@ -150,26 +156,5 @@
       font-size: 14px;
       opacity: 0.6;
     }
-  }
-}
-
-.flower-background {
-  background: url("../../assets/img/flower-medium.png");
-  height: 210px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-
-  @media screen and (min-width: 768px) {
-    height: 436px;
-    background-image: url("../../assets/img/flower-big.png");
-  }
-
-  @media screen and (min-width: 1024px) {
-    height: 740px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    height: 810px;
   }
 }

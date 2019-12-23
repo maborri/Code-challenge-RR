@@ -1,47 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { CircularProgress } from '@material-ui/core';
 
+import { config } from '../../config/config';
+import useFetch from '../../hooks/useFetch';
 import QuizResults from '../QuizResults';
 import ProductDisplay from '../ProductDisplay';
 import DailyRotation from '../DailyRotation';
+import Hero from '../Hero';
 import './style.scss';
 
 const App = () => {
-  const [appData, setAppData] = useState({
-    resultsMock: {
-      daily_rotation: {
-        title: '',
-        subtitle: '',
-        rotations: []
-      },
-    },
-    parsedProductData: {
-      title: '',
-      description: '',
-      price: 0,
-    }
-  });
+  const res = useFetch(config.mockUrl, config.appInitialState);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        'http://localhost:1234/quiz-results',
-      );
-      console.log('gota data AS:', result);
-      setAppData(result.data);
-    };
-
-    fetchData();
-  }, []);
-
-  return (
-    <>
-      <QuizResults />
-      <ProductDisplay product={appData.parsedProductData} />
-      <DailyRotation dailyRotation={appData.resultsMock.daily_rotation}
-      />
-    </>
-  );
+  if (res.isLoading) {
+    return (
+      <div className="results__container app__spinner">
+        <CircularProgress size={config.spinnerSize} />
+      </div>
+    );
+  } else {
+    return (
+      <>
+        <QuizResults
+          userName={res.appData.resultsMock.userName}
+          profile={res.appData.resultsMock.profile} />
+        <ProductDisplay product={res.appData.parsedProductData} />
+        <Hero background={res.appData.resultsMock.hero} />
+        <DailyRotation dailyRotation={res.appData.resultsMock.daily_rotation}
+        />
+      </>
+    );
+  }
 }
 
 export default App;
