@@ -5,6 +5,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* DEV NOTE: The mocks had an image as a background but I used a css gradient 
+  generated with (https://mycolor.space/gradient) to improve loading time
+  and remove screen size dependency */
   background-image: radial-gradient(
     circle,
     $gradient-secondary,

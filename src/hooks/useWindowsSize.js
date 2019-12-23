@@ -1,3 +1,6 @@
+/* DEV NOTE: This custom hooks allow us to re use all the logic related to screen resizing 
+on different components with ease */
+
 import { useState, useEffect } from 'react';
 
 export default function useWindowSize() {
@@ -22,6 +25,8 @@ export default function useWindowSize() {
       }
   
       window.addEventListener('resize', handleResize);
+      // DEV NOTE: useEffect hook allow us to set a cleanup function as the return value
+      // Here we remove the event listener to prevent memory leaks
       return () => window.removeEventListener('resize', handleResize);
     }, []);
   

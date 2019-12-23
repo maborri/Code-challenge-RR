@@ -1,68 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+## To test this project simply run: 
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## For a production ready build run:
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Key notes:
+For a small project like this there was no need for an external state managment library (think redux, mobx, etc). The react API and a well thought component structure is enough to manage the state and it's faster since we won't be loading extra dependencies. If we start seeing some prop drilling here and there, the Context API would provide a great solution since this app doesn't re render too often, keeping it simple.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The app was implemented with zero class components. This was a great chance to put the newly added hooks to test and you will find only functional components in the project. Besides the hype of using the latest features this is also a recomendation from the React team iteself (taken from https://reactjs.org/docs/hooks-intro.html):
+> We recommend avoiding any “big rewrites”, especially for existing, complex class components. It takes a > bit of a mindshift to start “thinking in Hooks”. In our experience, it’s best to practice using Hooks 
+> in new and non-critical components first, and ensure that everybody on your team feels comfortable with them
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Extra comments were added on the code with comments that start with **DEV NOTE:**, feel free to search them for further insights.
 
-### `npm run eject`
+* Many of the naming conventions and styles used were taken from [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* ESLint was used as linter (https://eslint.org/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Stylesheets use [BEM naming convention](http://getbem.com/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* Unit test and e2e test needed.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

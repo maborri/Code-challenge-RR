@@ -10,9 +10,13 @@ import Hero from '../Hero';
 import './style.scss';
 
 const App = () => {
-  const res = useFetch(config.mockUrl, config.appInitialState);
+  // DEV NOTE: The logic for fetching data was moved to a custom hook (useFetch)
+  // this allow us to move stateful logic around easily if needed
+  const res = useFetch(config.appUrl, config.appInitialState);
 
   if (res.isLoading) {
+    // DEV NOTE: Used Material-UI spinner (https://material-ui.com/es/) 
+    // Spinner size can be modified from config file.
     return (
       <div className="results__container app__spinner">
         <CircularProgress size={config.spinnerSize} />

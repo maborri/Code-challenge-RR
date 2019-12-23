@@ -75,6 +75,9 @@ const DailyRotation = (props) => {
   const onTouchEnd = (event) => {
     const lastPoint = event.changedTouches[0].clientX;
     const traveledDistance = startSwipePoint - lastPoint;
+    /* DEV NOTE: Two constants were defined on config file to set the minimun 
+    swipe width needed to move to the next or previous day on the carousel. This is to prevent
+    normal scrolling from changing the day. */
     if (traveledDistance < constants.MIN_SWIPE_RIGHT_DISTANCE) {
       if (currentoRotationDay === 1) {
         setRotationDay(props.dailyRotation.rotations.length)
