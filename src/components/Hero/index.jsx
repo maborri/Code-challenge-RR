@@ -8,7 +8,7 @@ import './Hero.scss';
 const Hero = (props) => {
   const size = useWidowsSize();
 
-  /* DEV NOTE: A quick fix was needed here(note replace) since the mock api returns 
+  /* DEV NOTE: A quick fix was needed here(note replace call on img path) since the mock api returns 
   an invalid path. But I've found that the same file name with .jpg extension works :)
   */
   return (
