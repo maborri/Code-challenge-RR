@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/RR/static/css/main.85e3e435.chunk.css",
+    "main.js": "/RR/static/js/main.900bf914.chunk.js",
+    "main.js.map": "/RR/static/js/main.900bf914.chunk.js.map",
+    "runtime-main.js": "/RR/static/js/runtime-main.2c269195.js",
+    "runtime-main.js.map": "/RR/static/js/runtime-main.2c269195.js.map",
+    "static/js/2.6dade064.chunk.js": "/RR/static/js/2.6dade064.chunk.js",
+    "static/js/2.6dade064.chunk.js.map": "/RR/static/js/2.6dade064.chunk.js.map",
+    "index.html": "/RR/index.html",
+    "precache-manifest.cd3be31f956c9964fe60ee6fccb92ec0.js": "/RR/precache-manifest.cd3be31f956c9964fe60ee6fccb92ec0.js",
+    "service-worker.js": "/RR/service-worker.js",
+    "static/css/main.85e3e435.chunk.css.map": "/RR/static/css/main.85e3e435.chunk.css.map",
+    "static/js/2.6dade064.chunk.js.LICENSE": "/RR/static/js/2.6dade064.chunk.js.LICENSE",
+    "static/media/Z-packaging.png": "/RR/static/media/Z-packaging.151a7781.png",
+    "static/media/flower-left.png": "/RR/static/media/flower-left.a96c7489.png",
+    "static/media/flower-right.png": "/RR/static/media/flower-right.f736f777.png",
+    "static/media/hexagon.png": "/RR/static/media/hexagon.272c8e93.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2c269195.js",
+    "static/js/2.6dade064.chunk.js",
+    "static/css/main.85e3e435.chunk.css",
+    "static/js/main.900bf914.chunk.js"
+  ]
+}
